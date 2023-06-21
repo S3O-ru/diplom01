@@ -1,0 +1,292 @@
+:root {
+    --color-yellow: #FBF138;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src:url(../font/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src:url(../font/Montserrat-Regular.ttf);
+    font-weight: 400;
+}
+.body {
+    position: relative;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 1326px;
+}
+.menu {
+    max-width: 1141px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu-left {
+    display: flex;
+    justify-content: flex-start;
+    gap: 92px;
+}
+.logo {
+    width: 97px;
+    height: 30px;
+}
+.logo-img {
+    background-image: url(../svg/logo.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.nav {
+    display: flex;
+    list-style-type: none;
+    gap: 54px;
+}
+.social {
+    display: flex;
+    gap: 30px;
+}
+.insta,
+.facebook {
+    width: 30px;
+    height: 30px;
+}
+.insta-img {
+    background-image: url(../svg/IN.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.facebook-img {
+    background-image: url(../svg/FB.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+.header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    height: 850px;
+    padding: 10px;
+}
+.header-background {
+    position: absolute;
+    background-image: url(../img/girl.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    right: 0;
+    top: 39px;
+    width: 996px;
+    height: 850px;
+    z-index: -1;
+}
+.header-background .gradient {
+    position: absolute;
+    width: 464px;
+    height: 824px;
+    left: 360px;
+    background: linear-gradient(90deg, #FBF138 0%, rgba(253, 249, 182, 0.45) 145.23%);
+    opacity: 0.2;
+}
+.header-content {
+    position: absolute;
+    padding-top: 228px;
+    max-width: 646px;
+    max-height: 385px;
+    z-index: 1;
+}
+.header-h1 {
+    max-width: 676px;
+    margin-left: 0;
+}
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+.header-info {
+    padding-top: 40px;
+    font-size: 40px;
+    margin-left: 0;
+    display: flex;
+    gap: 16px;
+}
+.header-description {
+    padding-top: 20px;
+    font-size: 18px;
+    margin-left: 85px;
+    max-width: 297px;
+}
+.header-button {
+    padding-top: 40px;
+    margin-left: 85px;
+    /* display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; */
+}
+.header-button button {
+    background: var(--color-yellow);
+    padding: 20px 30px;
+    border: 1px solid var(--color-yellow);
+    box-shadow: 0px 13px 24px rgba(251, 241, 56, 0.3);
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.header-arrow {
+    margin-left: 0;
+    margin-top: 212px;
+    width: 52px;
+    height: 55px;
+}
+.arrow-img {
+    background-image: url(../svg/Arrow.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.event {
+    margin-top: 160px;
+    max-width: 1143px;
+}
+.event-header h2 {
+    font-weight: 700;
+    font-size: 40px;
+}
+.event-body {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.one, 
+.two, 
+.three {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    max-width: 367px;
+    border: none
+}
+.one .description,
+.two .description,
+.three .description {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    width: 260px;
+}
+.one-img {
+    background-image: url(../img/maraphon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.two-img {
+    background-image: url(../img/vebinar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.three-img {
+    background-image: url(../img/maraphon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* после наложения градиента проблемы с машстабированием */
+
+.one-img .gradient,
+.two-img .gradient,
+.three-img .gradient {
+    height: 600px;
+    width: 367px;
+    background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0) 100%);
+    opacity: 0.3;
+    z-index: 0;
+}
+.one-img .gradient:hover,
+.two-img .gradient:hover,
+.three-img .gradient:hover {
+    background: linear-gradient(180deg, #e2d816 0%, rgba(253, 249, 182, 0) 100%);
+    opacity: 0.6;
+    transition: 0.2s;
+}
+.zapis a {
+    visibility:hidden;
+}
+/* 
+Появление окна записи при наведении мышки, оказалось слишком сложным
+
+.gradient:hover .zapis a {
+    display: block;
+} */
+
+.data {
+    padding-top: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    opacity: 0.6;
+}
+.name {
+    padding-top: 20px;
+    font-weight: 700;
+    font-size: 28px;
+}
+.hashteg {
+    position: absolute;
+    padding-top: 570px;
+    padding-left: 221px;
+}
+.hashteg a {
+    background: var(--color-yellow);
+    padding: 10px 20px;
+    border: 1px solid var(--color-yellow);
+}
+.rasp {
+    margin-top: 160px;
+    max-width: 1143px;
+}
+.rasp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.h2-header h2 {
+    font-weight: 700;
+    font-size: 40px;
+}
+.data-header {
+    font-weight: 700;
+    font-size: 28px;
+}
+
+/* не создаются блоки различной высоты как в макете */
+
+.rasp-body {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.child {
+    border: 1px solid #2B3541;
+    opacity: 0.6;
+    max-width: 367px;
+    height: 374px;
+}
