@@ -95,13 +95,13 @@
 /* ============= HEADER ============== */
 
 .header {
-     
+  position: relative;  
     width: 100%;
     z-index: 0;
 }
 
 .header .contents {
-  position: relative; 
+  
   display: flex;
   justify-content: space-between;
 }
@@ -109,22 +109,28 @@
 .header-content {
   position: relative;
   width: 60%;
-  border: 1px solid #2B3541;
   padding: 228px 0;
 }
-/* .header-content a:hover {
-  color: #FBF138;
-  background-color: #2B3541;
-} */
-/* .header .contents::after {
+
+.header::after {
   content: '';
   position: absolute;
-  border: 1px solid green;
-  width: 100%;
-  height: 100%;
+  display: block;
+  max-width: 1509px;
   top: 0;
   left: 0;
-} */
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/girl.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: contain;
+  z-index: -1;
+}
+
 .header-h1 h1{
   font-weight: 700;
   font-size: 48px;
@@ -164,11 +170,7 @@
 .header-background {
   width: 40%;
   height: auto;
-  border: 1px solid #2B3541;
-  /* background-image: url(../img/girl.png);
-  background-repeat: no-repeat;
-  background-size: contain; */
-  /* z-index: -1; */
+  z-index: -2;
 }
 .header-background .gradient {
   width: 100%;
@@ -180,6 +182,7 @@
 /* ============= EVENT ============== */
 .event {
     width: 100%;
+    margin-top: 20px;
 }
 
 .event .contents {
@@ -267,34 +270,6 @@
   display: block;
 }
 
-/* после наложения градиента проблемы с машстабированием */
-
-/* .one-img .gradient,
-.two-img .gradient,
-.three-img .gradient {
-    height: 600px;
-    width: 367px;
-    background: linear-gradient(180deg, #FBF138 0%, rgba(253, 249, 182, 0) 100%);
-    opacity: 0.3;
-    z-index: 0;
-}
-.one-img .gradient:hover,
-.two-img .gradient:hover,
-.three-img .gradient:hover {
-    background: linear-gradient(180deg, #e2d816 0%, rgba(253, 249, 182, 0) 100%);
-    opacity: 0.6;
-    transition: 0.2s;
-}
-.zapis a {
-    visibility:hidden;
-} */
-/* 
-Появление окна записи при наведении мышки, оказалось слишком сложным
-
-.gradient:hover .zapis a {
-    display: block;
-} */
-
 .data {
     margin-top: 10px;
     font-weight: 700;
@@ -321,20 +296,12 @@
   display: none;
 }
 
-
-
-
-
-
-
-
-
-
+/* ============= РАСПИСАНИЕ ============== */
 
 
 .rasp {
-    margin-top: 160px;
-    max-width: 1143px;
+  width: 100%;
+  margin-top: 20px;
 }
 .rasp-header {
     display: flex;
@@ -355,12 +322,48 @@
 .rasp-body {
     margin-top: 36px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-areas:  "img-1 img-3 img-5"  
+                          "img-1 img-4 img-5"  
+                          "img-2 img-4 img-6"; 
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 .child {
     border: 1px solid #2B3541;
     opacity: 0.6;
-    max-width: 367px;
-    height: 374px;
+}
+.child:nth-child(1) {
+  grid-area: img-1;
+  height: 374px;
+}
+.child:nth-child(2) {
+  grid-area: img-2;
+  height: 309px;
+}
+.child:nth-child(3) {
+  grid-area: img-3;
+  height: 309px;
+}
+.child:nth-child(4) {
+  grid-area: img-4;
+  height: 374px;
+}
+.child:nth-child(5) {
+  grid-area: img-5;
+  height: 374px;
+}
+.child:nth-child(6) {
+  grid-area: img-6;
+  height: 309px;
+}
+@media (max-width: 800px) {
+  .rasp-body {
+    grid-template-areas:  "img-1 img-2"  
+                          "img-3 img-4"  
+                          "img-5 img-6"; 
+  grid-template-columns: repeat(2, 1fr);
+  }
+  .child:nth-child(1n) {
+    height: 224px;
+  }
 }
