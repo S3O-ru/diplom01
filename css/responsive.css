@@ -1,0 +1,275 @@
+@media (min-width: 769px) {
+  .burger {
+      display: none;
+  }
+}
+@media (max-width: 768px) {
+
+.contents {
+  max-width: 768px;
+}  
+
+/* ============= MENU ============== */
+.burger {
+  width: 29px;
+  height: 22px;
+  background-image: url(../svg/burger.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  max-width: 587px;
+  background-color: #F3F3F3;
+  top: -700px;
+  left: 0;
+  right: 0;
+  margin: 20px auto 0;
+  box-sizing: border-box;
+  transition: .5s;
+}
+.protolap {
+  padding: 30px 10px;
+}
+.nav-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style-type: none;
+  width: 100%;
+  padding: 40px 0;
+}
+hr {
+  opacity: 0.20000000298023224;
+  background: #2B3541;
+}
+.modal .social {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+.overlap {
+  padding: 67px 0;
+  opacity: 0.4000000059604645;
+  background: var(--dark, #2B3541);
+}
+
+ /* Не исчезает кнопка */
+
+ .btn .mobile {
+  display: none;
+}
+.burger-close {
+  width: 20px;
+  height: 19px;
+  background-image: url(../svg/close.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  position: absolute;
+  top: 34px;
+  right: 10px;
+  cursor: pointer;
+}
+.nav {
+  display: none;
+}
+
+/* ============= HEADER ============== */
+
+.header-content {
+  padding: 30px 0;
+}
+.header::after {
+  max-width: 442px;
+  margin-right: 10px;
+  margin-top: 90px;
+}
+.header-h1 h1{
+  font-size: 26px;
+}
+.header-info {
+  margin-top: 40px;
+  font-size: 26px;
+}
+.header-description {
+  max-width: 255px;
+  font-size: 16px;
+  margin-left: 0px;
+}
+.header-button {
+  max-width: 252px;  
+  margin-left: 0px;
+}
+
+/* Не прижимается к низу хэдера */
+
+.header-arrow {
+  background-size: contain;
+  bottom: -47px;
+  width: 40px;
+  height: 40px;
+}
+
+/* ============= EVENT ============== */
+
+.event-header h2 {
+  font-size: 26px;
+}
+
+/* Не ясно как делать блок из трех фото */
+
+/* .event-body {
+  grid-template-areas:    "one two"  
+                          "three three"; 
+  grid-template-columns: repeat(2, 1fr);
+  } */
+
+
+/* ============= РАСПИСАНИЕ ============== */
+
+.h2-header h2 {
+  font-size: 26px;
+}
+.data-header {
+  font-size: 16px;
+}
+.child-data {
+  font-size: 16px;
+}
+.child-title {
+  font-size: 16px;
+  padding: 20px 30px;
+}
+
+/* ============= РАССЫЛКА ============== */
+
+.rass-header h2 {
+  margin: 0 auto;
+  font-size: 26px;
+  max-width: 201px
+}
+.rass-header::before {
+    width: 31px;
+    height: 31px;
+    top: 65px;
+    left: 232px;
+  }
+.subscribe div {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 20px;
+  }
+.subscribe div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 40px;
+  }
+  /* .subscribe input, */
+.subscribe button {
+    width: 340px;
+    padding: 32px;
+    margin: 0 auto;
+  
+  }
+.subscribe input[type="email"] {
+    background: white;
+    border: 1px solid white;
+    width: 340px;
+    padding: 32px;
+    margin: 0 auto;
+  }
+.check-text {
+  font-size: 11px;
+  margin: 0 auto;
+} 
+/* ============= О НАС ============== */
+
+
+.about-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 80px;
+}
+.left {
+  max-width: 340px;
+}
+.left-title h2 {
+  font-size: 26px;
+}
+.left-description {
+  font-size: 16px;
+}
+.about-button {
+  padding: 20px 51px;
+}
+.about-pic {
+  width: 372px;
+  height: 227px;
+}
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.benefit-description,
+.benefit-title {
+  font-size: 16x;
+}
+/* ============= ПОДВАЛ ============== */
+
+.menu-top {
+  display: flex;
+  flex-direction: column;
+}
+.menu-left {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.menu-footer .nav {
+  gap: 25px;
+}
+
+/* элементы не прижимаются к правому краю */
+
+.menu-footer .menu-right {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 12px;
+}
+.copy-right,
+.info-footer {
+  font-size: 10px;
+}
+}
+
+@media (max-width: 340px) {
+  .modal {
+    max-width: 360px;
+  }
+  /* Не фиксируется размер */
+  
+  .btn .mobile {
+    width: 340px;
+  }
+  .overlap {
+    padding: 67px 0;
+    opacity: 0.4000000059604645;
+    background: var(--dark, #2B3541);
+  }
+}
+
+
+
+
+
