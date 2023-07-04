@@ -25,7 +25,7 @@
   flex-direction: column;
   justify-content: flex-start;
   position: absolute;
-  max-width: 587px;
+  width: 587px;
   background-color: #F3F3F3;
   top: -700px;
   left: 0;
@@ -59,10 +59,7 @@ hr {
   opacity: 0.4000000059604645;
   background: var(--dark, #2B3541);
 }
-
- /* Не исчезает кнопка */
-
- .btn .mobile {
+ .btn.mobile {
   display: none;
 }
 .burger-close {
@@ -85,18 +82,17 @@ hr {
 /* ============= HEADER ============== */
 
 .header-content {
-  padding: 30px 0;
+  padding: 30px 0 10px;
 }
 .header::after {
-  max-width: 442px;
+  max-width: 400px;
   margin-right: 10px;
-  margin-top: 90px;
+  /* margin-top: 90px; */
 }
 .header-h1 h1{
   font-size: 26px;
 }
 .header-info {
-  margin-top: 40px;
   font-size: 26px;
 }
 .header-description {
@@ -108,12 +104,12 @@ hr {
   max-width: 252px;  
   margin-left: 0px;
 }
-
-/* Не прижимается к низу хэдера */
-
 .header-arrow {
   background-size: contain;
-  bottom: -47px;
+  position: relative;
+  /* bottom: -47px; */
+  margin-top: 50px;
+
   width: 40px;
   height: 40px;
 }
@@ -124,14 +120,43 @@ hr {
   font-size: 26px;
 }
 
-/* Не ясно как делать блок из трех фото */
+.event-body {
+  flex-wrap: wrap;
+}
+.one, 
+.two {
+    width: calc((100% - 20px) / 2);
+    height: 308px;
+}
 
-/* .event-body {
-  grid-template-areas:    "one two"  
-                          "three three"; 
-  grid-template-columns: repeat(2, 1fr);
-  } */
-
+.three {
+    width: 100%;
+    height: 336px;
+}
+.data {
+  font-size: 12px;
+}
+.name {
+  font-size: 16px;
+}
+.hash-btn {
+  justify-content: space-between;
+  align-items: end;
+}
+.hash-btn a {
+  font-size: 12px;
+}
+.hashteg .plus {
+  display: block;
+  background-image: url(../svg/mdi_add.svg);
+  background-color: #2B3541;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
 
 /* ============= РАСПИСАНИЕ ============== */
 
@@ -148,6 +173,17 @@ hr {
   font-size: 16px;
   padding: 20px 30px;
 }
+
+.rasp-body {
+  grid-template-areas:  "img-1 img-2"  
+                        "img-3 img-4"  
+                        "img-5 img-6"; 
+grid-template-columns: repeat(2, 1fr);
+}
+.child:nth-child(1n) {
+  height: 224px;
+}
+
 
 /* ============= РАССЫЛКА ============== */
 
@@ -239,14 +275,20 @@ hr {
 .menu-footer .nav {
   gap: 25px;
 }
-
-/* элементы не прижимаются к правому краю */
-
 .menu-footer .menu-right {
+  padding-top: 59px;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
+  gap: 33px;
   font-size: 12px;
 }
+.menu-footer .menu-right::before {
+    width: 20px;
+    height: 20px;
+    top: 55px;
+    left: 475px;
+  }
 .copy-right,
 .info-footer {
   font-size: 10px;
@@ -254,22 +296,248 @@ hr {
 }
 
 @media (max-width: 340px) {
+
+  .contents {
+    max-width: 340px;
+  } 
+
+  /* ============= MENU ============== */
+  
   .modal {
     max-width: 360px;
   }
-  /* Не фиксируется размер */
-  
-  .btn .mobile {
+  .btn.mobile {
+    margin: 0 auto;
+    display: block;
     width: 340px;
   }
-  .overlap {
-    padding: 67px 0;
-    opacity: 0.4000000059604645;
-    background: var(--dark, #2B3541);
+  .menu-left {
+    gap: 57px;
   }
+  .menu-right {
+    width: 100px;
+  }
+  .social {
+      display: flex;
+      gap: 20px;
+  }
+  .insta,
+  .facebook {
+      width: 26px;
+      height: 26px;
+  }
+
+/* ============= HEADER ============== */
+
+.header .contents {
+  display: grid;
+  gap: 200px;
+}
+.header-h1 h1 {
+  width: 360px;
+  font-size: 24px;
+}
+.header-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.header-description {
+  width: 255px;
+}
+.header-button {
+  margin: 40px auto;
+  width: 340px;
+}
+.header-arrow {
+  display: none;
+}
+.header::after {
+  max-width: 340px;
+}
+
+/* ============= EVENT ============== */
+
+.event-header h2 {
+  width: 301px;
+}
+.event-body {
+  gap: 11px;
+}
+.data {
+  font-size: 10px;
+}
+.name {
+  font-size: 12px;
+}
+.hash-btn .btn {
+  width: 87px;
+}
+.hash-btn a {
+  padding: 8px 16px;
+  font-size: 10px;
+}
+.hashteg .plus {
+  padding-left: 7px;
+}
+
+/* ============= РАСПИСАНИЕ ============== */
+
+.h2-header h2 {
+  font-size: 26px;
+}
+.data-header {
+  font-size: 16px;
+}
+.child-data {
+  font-size: 16px;
+}
+.child-title {
+  font-size: 16px;
+  padding: 20px 30px;
+}
+.rasp-body {
+  grid-template-areas:  "img-1"  
+                        "img-2"  
+                        "img-3"
+                        "img-4"  
+                        "img-5"                       
+                        "img-6"; 
+grid-template-columns: repeat(1, 1fr);
+}
+.child:nth-child(1n) {
+  height: 114px;
+}
+.child-data {
+  font-size: 16px;
+}
+.child-title {
+  font-size: 16px;
+  padding: 0 0 28px 0;
+}
+.child-content-two {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+} 
+.child-pic-body {
+  width: 39px;
+  height: 39px;
+  margin: 0 0 20px 20px;
+}
+.pic-body {
+  background-image: url(../svg/min/body.svg);
+  margin: 0 0 20px 0;
+} 
+.child-pic-jump {
+  width: 34px;
+  height: 53px;
+  margin: 0 0 20px 20px;
+}
+.pic-jump {
+  background-image: url(../svg/min/jump.svg);
+  margin: 0 0 20px 0;
+} 
+.child-pic-bottle {
+  width: 23px;
+  height: 45px;
+  margin: 0 0 20px 20px;
+}
+.pic-bottle {
+  background-image: url(../svg/min/bottle.svg);
+  margin: 0 0 20px 0;
+} 
+.child-pic-heart {
+  width: 39px;
+  height: 37px;
+  margin: 0 0 20px 20px;
+}
+.pic-heart {
+  background-image: url(../svg/min/heart.svg);
+  margin: 0 0 20px 0;
+} 
+.child-pic-dumbbell {
+  width: 46px;
+  height: 25px;
+  margin: 0 0 20px 20px;
+}
+.pic-dumbbell {
+  background-image: url(../svg/min/dumbbell.svg);
+  margin: 0 0 20px 0;
+} 
+.child-pic-weight {
+  width: 35px;
+  height: 40px;
+  margin: 0 0 20px 20px;
+}
+.pic-weight {
+  background-image: url(../svg/min/weight.svg);
+  margin: 0 0 20px 0;
+} 
+/* ============= РАССЫЛКА ============== */
+
+.rass-header::before {
+  top: 67px;
+  left: 38px;
+}
+.rass {
+  height: 416px;
+}
+.subscribe div:nth-child(1) {
+  position: absolute;
+  width: 340px;
+}
+.subscribe div:nth-child(2){
+  position: absolute;
+}
+/* .subscribe input, */
+.subscribe button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: 1px solid var(--color-yellow);
+  width: 225px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 21px;
+  background-color: var(--color-yellow);
+
 }
 
 
+/* ============= О НАС ============== */
+
+.about-button {
+  padding: 20px 80px;
+}
+.about-pic {
+  display: none;
+}
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+/* ============= ПОДВАЛ ============== */
 
 
+.menu-footer .menu-left {
+  display: grid;
+  justify-items: center
+}
+.menu-footer .menu-right {
+    justify-content: space-between;
+  }
+.menu-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+.menu-footer .menu-right::before {
+  left: -9px;
+}
+}
 

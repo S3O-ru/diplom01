@@ -117,11 +117,11 @@
   display: block;
   max-width: 1509px;
   top: 0;
-  left: 0;
+  /* left: 0; */
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
+  /* margin-left: auto;
+  margin-right: auto; */
+  width: 80%;
   height: 100%;
   background-image: url(../img/girl.png);
   background-repeat: no-repeat;
@@ -130,7 +130,7 @@
   z-index: -1;
 }
 
-.header-h1 h1{
+.header-h1 h1 {
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
@@ -273,7 +273,7 @@
     opacity: 0.6;
 }
 .name {
-  margin-top: 20px;
+    margin-top: 20px;
     font-weight: 700;
     font-size: 28px;
 }
@@ -354,17 +354,6 @@
 .child:nth-child(6) {
   grid-area: img-6;
   height: 309px;
-}
-@media (max-width: 800px) {
-  .rasp-body {
-    grid-template-areas:  "img-1 img-2"  
-                          "img-3 img-4"  
-                          "img-5 img-6"; 
-  grid-template-columns: repeat(2, 1fr);
-  }
-  .child:nth-child(1n) {
-    height: 224px;
-  }
 }
 .child-content {
   height: 100%;
