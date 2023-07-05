@@ -360,7 +360,7 @@ grid-template-columns: repeat(2, 1fr);
   width: 255px;
 }
 .header-button {
-  margin: 40px auto;
+  margin: 40px 20px;
   width: 340px;
 }
 .header-arrow {
@@ -504,24 +504,6 @@ grid-template-columns: repeat(1, 1fr);
 .subscribe div:nth-child(2){
   position: absolute;
 }
-/* .subscribe input, */
-.subscribe button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  outline: none;
-  border: 1px solid var(--color-yellow);
-  width: 225px;
-  text-align: center;
-  font-weight: 700;
-  letter-spacing: 0.48px;
-  text-transform: uppercase;
-  cursor: pointer;
-  padding: 21px;
-  background-color: var(--color-yellow);
-
-}
-
-
 /* ============= О НАС ============== */
 
 .about-button {
