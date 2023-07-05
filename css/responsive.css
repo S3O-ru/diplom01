@@ -371,7 +371,9 @@ grid-template-columns: repeat(2, 1fr);
 }
 
 /* ============= EVENT ============== */
-
+.event {
+  margin-top: 128px;
+}
 .event-header h2 {
   width: 301px;
 }
