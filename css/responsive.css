@@ -6,7 +6,8 @@
 @media (max-width: 768px) {
 
 .contents {
-  max-width: 768px;
+  width: 100%;
+  padding: 0 10px;
 }  
 
 /* ============= MENU ============== */
@@ -195,33 +196,31 @@ grid-template-columns: repeat(2, 1fr);
 .rass-header::before {
     width: 31px;
     height: 31px;
-    top: 65px;
-    left: 232px;
+    top: 75px;
+    left: 262px;
   }
-.subscribe div {
-    display: flex;
+.subscribe {
+    width: 100%;
+    max-width: 360px;
     flex-direction: column;
     margin: 0 auto;
-    gap: 20px;
+    row-gap: 43px;
   }
 .subscribe div:nth-child(1) {
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
     gap: 20px;
     margin-top: 40px;
   }
   /* .subscribe input, */
 .subscribe button {
-    width: 340px;
-    padding: 32px;
+    width: 100%;
+    padding: 20px auto;
     margin: 0 auto;
-  
+    text-align: center;
   }
 .subscribe input[type="email"] {
-    background: white;
-    border: 1px solid white;
-    width: 340px;
-    padding: 32px;
+    width: 100%;
+    padding: 19px 25px;
     margin: 0 auto;
   }
 .check-text {
@@ -295,16 +294,12 @@ grid-template-columns: repeat(2, 1fr);
 }
 }
 
-@media (max-width: 340px) {
-
-  .contents {
-    max-width: 340px;
-  } 
+@media (max-width: 360px) {
 
   /* ============= MENU ============== */
   
   .modal {
-    max-width: 360px;
+    width: 100%;
   }
   .btn.mobile {
     margin: 0 auto;
@@ -328,47 +323,36 @@ grid-template-columns: repeat(2, 1fr);
   }
 
 /* ============= HEADER ============== */
+.header .contents {
+  flex-direction: column;
+  row-gap: 21px;
+}
 
 .header-content {
-  padding: 30px 0 200px 0px;
-  width: 0;
-}
-
-/* .header .contents {
-  display: grid;
-  gap: 200px; 
-} */
-
-.header-background {
   width: 100%;
-  padding-top: 374px;
 }
 
-.header::after {
-  max-width: 340px;
-}
-.header-h1 h1 {
-  width: 360px;
-  font-size: 24px;
-}
-.header-info {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-.header-description {
-  width: 255px;
-}
-.header-button {
-  margin: 40px 20px;
-  width: 340px;
-}
 .header-arrow {
   display: none;
 }
+
+.header-background {
+  width: 100%;
+  height: 281px;
+}
+
 .header::after {
+  width: 100%;
   max-width: 340px;
 }
+
+.rass-header::before {
+    width: 31px;
+    height: 31px;
+    top: 64px;
+    left: 60px;
+    z-index: -1;
+  }
 
 /* ============= EVENT ============== */
 .event {
@@ -385,6 +369,12 @@ grid-template-columns: repeat(2, 1fr);
 }
 .name {
   font-size: 12px;
+}
+
+.one:hover .zapis, 
+.two:hover .zapis, 
+.three:hover .zapis{
+  display: none;
 }
 .hash-btn .btn {
   width: 87px;
@@ -490,22 +480,6 @@ grid-template-columns: repeat(1, 1fr);
   background-image: url(../svg/min/weight.svg);
   margin: 0 0 20px 0;
 } 
-/* ============= РАССЫЛКА ============== */
-
-.rass-header::before {
-  top: 67px;
-  left: 38px;
-}
-.rass {
-  height: 416px;
-}
-.subscribe div:nth-child(1) {
-  position: absolute;
-  width: 340px;
-}
-.subscribe div:nth-child(2){
-  position: absolute;
-}
 /* ============= О НАС ============== */
 
 .about-button {
