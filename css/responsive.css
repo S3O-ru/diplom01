@@ -483,7 +483,7 @@ grid-template-columns: repeat(1, 1fr);
 /* ============= О НАС ============== */
 
 .about-button {
-  padding: 20px 80px;
+  padding: 20px 80px 20px 50px;
 }
 .about-pic {
   display: none;
