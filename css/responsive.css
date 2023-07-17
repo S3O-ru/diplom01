@@ -26,7 +26,7 @@
   flex-direction: column;
   justify-content: flex-start;
   position: absolute;
-  width: 587px;
+  width: 100%;
   background-color: #F3F3F3;
   top: -700px;
   left: 0;
@@ -498,11 +498,17 @@ grid-template-columns: repeat(1, 1fr);
 } */
 
 /* ============= О НАС ============== */
-
-.about-button {
-  padding: 20px 80px 20px 50px;
+.about {
+  margin-top: 80px;
 }
-.about-pic {
+.left-buttom {
+  padding-top: 34px;
+}
+ .about-button {
+  padding: 20px 111px;
+  max-width: 340px;
+}
+.about .right {
   display: none;
 }
 .benefits {
